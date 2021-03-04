@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://biezhaowo1123.github.io</id>
     <title>别找我个人博客</title>
-    <updated>2021-04-23T12:18:28.775Z</updated>
+    <updated>2021-04-24T05:20:42.659Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://biezhaowo1123.github.io"/>
     <link rel="self" href="https://biezhaowo1123.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://biezhaowo1123.github.io/images/avatar.png</logo>
     <icon>https://biezhaowo1123.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 别找我个人博客</rights>
+    <entry>
+        <title type="html"><![CDATA[学习Java需要注意的一些知识]]></title>
+        <id>https://biezhaowo1123.github.io/post/java/</id>
+        <link href="https://biezhaowo1123.github.io/post/java/">
+        </link>
+        <updated>2021-04-24T05:19:23.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[学习Python要注意的地方]]></title>
         <id>https://biezhaowo1123.github.io/post/Python/</id>

@@ -1,0 +1,235 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>学习Java需要注意的一些知识 | 别找我个人博客</title>
+<link rel="shortcut icon" href="https://biezhaowo1123.github.io/favicon.ico?v=1619241637330">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://biezhaowo1123.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="学习Java需要注意的一些知识 | 别找我个人博客 - Atom Feed" href="https://biezhaowo1123.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="java代码文件后缀必须是.java；
+java文件的名字，要与类名一致；
+java代码大多以类为单位，可以在一个java代码中写一个或者多个类；
+一般情况下建议每个java代码写一个类就行；
+写多个的时候需要注意：
+多个类之间的关系是并列..." />
+    <meta name="keywords" content="java" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://biezhaowo1123.github.io">
+  <img class="avatar" src="https://biezhaowo1123.github.io/images/avatar.png?v=1619241637330" alt="">
+  </a>
+  <h1 class="site-title">
+    别找我个人博客
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://biezhaowo1123.github.io" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              学习Java需要注意的一些知识
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-04-24
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://biezhaowo1123.github.io/tag/TFk9QEJdZ/" class="post-tag">
+                  # java
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>java代码文件后缀必须是.java；<br>
+java文件的名字，要与类名一致；<br>
+java代码大多以类为单位，可以在一个java代码中写一个或者多个类；<br>
+一般情况下建议每个java代码写一个类就行；<br>
+写多个的时候需要注意：<br>
+多个类之间的关系是并列的，编译时候会一一对应生成相应的class文件；<br>
+编写的多个类只能有一个类用public修饰，且这个类需要与java文件名字一致；<br>
+在java类中可以编写属性，方法，构造器等代码；<br>
+使用Java命令编译运行一个java代码，有两步：<br>
+javac Hello.java    --&gt;javac 类名.java （编译器编译）  ；<br>
+java Hello             --&gt;java 类名           （解释器解释）   ；<br>
+一个类若要运行，java命令就会找一个叫做main的固定格式的方法：<br>
+普通类：可以用javac编译成class字节码文件，但是不能运行；<br>
+可以独立运行的类：有程序入口，可以直接运行，可以调用别的类；<br>
+&quot;一个叫做main的固定格式的方法&quot;可以叫做main方法（主函数/main函数）--&gt;public static void mian(String[] args){}<br>
+jdk是向下兼容的，即高版本jdk编译的class文件，低版本jdk无法运行，低版本编译的class，高版本可以运行；<br>
+在书写java代码时候需要注意格式缩进的问题，tab键（相当于四个空格长度），这样做的目的不仅仅是为了美观，也是为了后期维护；<br>
+需要引入别人写好的类/代码，需要用到关键字import，目的是告诉jvm这个调用关系，从而在运行时候达到调用的目的，有两个特殊情况：<br>
+同包类无需导入；<br>
+java.lang包下的类无需导入；<br>
+jar包：<br>
+打包命令：<br>
+Hello.class--&gt;hello.jar:   jar -cvf hello.jar Hello.class   解释：将Hello.class打包到hello.jar；<br>
+Hello.class , World.class --&gt; hello.jar:  jar -cvf hello.jar Hello.class World.class；<br>
+目录下所有class文件打包到hello.jar：jar -cvf hello.jar <em>.class  解释：</em>--&gt; 所有；<br>
+将xxx目录下但是【不包含】该目录打包到hello.jar:  jar -cvf hello.jar -C xxx .   ；<br>
+将xxx目录下但是【包含】该目录打包到hello.jar:  jar -cvf hello.jar xxx；<br>
+修改MF文件：（META-INF/MANIFEST.MF）<br>
+添加内容格式为：   key: value（冒号后面有个空格）<br>
+Main-Class:包名.类名  ；<br>
+例如： Main-Class: Hello  <br>
+最后注意：文本最后需要留一个空行 ;<br>
+要运行的jar包调用了别的jar包：<br>
+Hello.class调用了 Word.class 和 HelloWord.class；<br>
+三个class字节码文件分别都打了jar包；<br>
+需要在hello.jar的MF文件进行设置：<br>
+Manifest-Version: 1.0<br>
+Created-By: 1.8.0_102 (Oracle Corporation)<br>
+Main-Class: xxx(包名).hello<br>
+Class-Path: xxx.helloword.jar xxx.word.jar<br>
+------(此行为空)------<br>
+jar包运行：<br>
+例如：java -jar hello.jar<br>
+package对class的影响:<br>
+package就是命名空间的设计；<br>
+例如：http://commons.apache.org/  ；<br>
+上面的网址下的代码就是以pacakge org.apache.commons 开头的；<br>
+一个类加上包名，编译之后的class字节码文件是有相同的包结构的；<br>
+运行：<br>
+package com.xxx.test;public class Hello{...}<br>
+编译后的class字节码文件在com/xxx/test/Hello.class；<br>
+运行时候要加入包名：java com.xxx.test.Hello；<br>
+javac -d . Hello.java  可以指定编译之后的class文件存放位置；<br>
+com.xxx.test.Hello--&gt;Hello为简单类名  com.xxx.test.Hello为全限定名；<br>
+有关classpath的设置：<br>
+永久有效： 电脑的环境变量中设置;<br>
+当前窗口有效： set classpath=bin;<br>
+仅当前命令生效： java -cp bin Hello  ，注意：当前命令执行完就失效了 ；<br>
+jdk4以后，带包的类调用不带包的类会报错；<br>
+java文件和class文件存放规则：<br>
+xxx.java  存放到src目录<br>
+xxx.class 存放到bin目录</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://biezhaowo1123.github.io/post/Python/">
+              <h3 class="post-title">
+                学习Python要注意的地方
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/biezhaowo1123" target="_blank">Gridea</a>
+  <a class="rss" href="https://biezhaowo1123.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
