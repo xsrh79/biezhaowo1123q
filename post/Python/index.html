@@ -1,101 +1,102 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>学习Python要注意的地方 | 别找我个人博客</title>
-<link rel="shortcut icon" href="https://biezhaowo1123.github.io/favicon.ico?v=1619241669575">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://biezhaowo1123.github.io/favicon.ico?v=1619241748618">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://biezhaowo1123.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="学习Python要注意的地方 | 别找我个人博客 - Atom Feed" href="https://biezhaowo1123.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="Hello World
-使用 print() 方法打印 HelloWorld
-name = &quot;Jenkin Li&quot;print(&quot;My name is &quot;, name)
-Python 2.x 中的编码问..." />
-    <meta name="keywords" content="Python" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://biezhaowo1123.github.io">
-  <img class="avatar" src="https://biezhaowo1123.github.io/images/avatar.png?v=1619241669575" alt="">
-  </a>
-  <h1 class="site-title">
-    别找我个人博客
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="https://biezhaowo1123.github.io" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://biezhaowo1123.github.io">
+        <img class="avatar" src="https://biezhaowo1123.github.io/images/avatar.png?v=1619241748618" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://biezhaowo1123.github.io">
+        <h1 class="site-title">别找我个人博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="https://biezhaowo1123.github.io" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              学习Python要注意的地方
-            </h2>
-            <div class="post-info">
-              <span>
-                2021-04-23
-              </span>
-              <span>
-                3 min read
-              </span>
-              
-                <a href="https://biezhaowo1123.github.io/tag/SF-iAI3yk/" class="post-tag">
-                  # Python
-                </a>
-              
-            </div>
+          
+          <h2 class="post-title">学习Python要注意的地方</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-04-23</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>Hello World</p>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://biezhaowo1123.github.io/tag/SF-iAI3yk/">
+                    Python
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>Hello World</p>
 <p>使用 print() 方法打印 HelloWorld</p>
 <p>name = &quot;Jenkin Li&quot;print(&quot;My name is &quot;, name)</p>
 <p>Python 2.x 中的编码问题</p>
@@ -175,72 +176,53 @@ Python 2.x 中的编码问..." />
 <p>以上</p>
 <!-- more -->
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li><a href="#-codingutf-8-">-- coding:utf-8 --</a></li>
-<li><a href="#%E5%8D%95%E8%A1%8C%E6%B3%A8%E9%87%8A">单行注释</a></li>
-<li><a href="#break-%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%BF%90%E8%A1%8C-else-%E5%9D%97">break 后不会运行 else 块</a></li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/biezhaowo1123" target="_blank">Gridea</a>
-  <a class="rss" href="https://biezhaowo1123.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/biezhaowo1123" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/biezhaowo1123" target="_blank">Gridea</a> | <a class="rss" href="https://biezhaowo1123.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>
