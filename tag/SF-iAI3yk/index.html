@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://biezhaowo1123.github.io/favicon.ico?v=1619241809920">
+<link rel="shortcut icon" href="https://biezhaowo1123.github.io/favicon.ico?v=1619242013309">
 <link rel="stylesheet" href="https://biezhaowo1123.github.io/styles/main.css">
 
 
@@ -27,7 +27,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://biezhaowo1123.github.io">
-        <img src="https://biezhaowo1123.github.io/images/avatar.png?v=1619241809920" class="site-logo">
+        <img src="https://biezhaowo1123.github.io/images/avatar.png?v=1619242013309" class="site-logo">
         <h1 class="site-title">别找我个人博客</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -93,91 +93,13 @@
             <article class="post-item">
               <div class="left">
                 <a href="https://biezhaowo1123.github.io/post/Python/">
-                  <h2 class="post-title">学习Python要注意的地方</h2>
+                  <h2 class="post-title">学习Python需要注意的几点</h2>
                 </a>
                 <div class="post-date">
-                  2021-04-23
+                  2021-04-24
                 </div>
                 <div class="post-abstract">
-                  <p>Hello World</p>
-<p>使用 print() 方法打印 HelloWorld</p>
-<p>name = &quot;Jenkin Li&quot;print(&quot;My name is &quot;, name)</p>
-<p>Python 2.x 中的编码问题</p>
-<p>因为 Python 2.x 使用的是 ASCII 编码，默认不支持中文，必须在文件头声明文件使用的是什么编码</p>
-<h1 id="-codingutf-8-">-- coding:utf-8 --</h1>
-<p>Python 的注释</p>
-<p>分为单行注释和多行注释</p>
-<h1 id="单行注释">单行注释</h1>
-<p>'''</p>
-<p>多行注释</p>
-<p>'''</p>
-<p>Python 文本格式化输出</p>
-<ol>
-<li>使用 %s, %d 等占位符name = input(&quot;name: &quot;)</li>
-</ol>
-<p>age = input(&quot;age: &quot;)</p>
-<p>job = input(&quot;job: &quot;)</p>
-<p>salary = input(&quot;salary: &quot;)</p>
-<p>info = '''</p>
-<p>---------- info of %s ---------</p>
-<p>Name: %s</p>
-<p>Age: %s</p>
-<p>job: %s</p>
-<p>salary: %s</p>
-<p>''' % (name, name, age, job, salary)</p>
-<p>print(info)</p>
-<p>PS: 如果使用 %d ，则必须使用 int() 转换为数值类型，input 的类型默认为字符串。与 int() 相反，str() 将数值类型转换为字符串。</p>
-<p>Python 中无法将数值和字符串通过 + 号相连接，必须先通过转换</p>
-<ol start="2">
-<li>使用参数格式化输出info = '''</li>
-</ol>
-<p>---------- info of {_name} ---------</p>
-<p>Name: {_name}</p>
-<p>Age: {_age}</p>
-<p>job: {_job}</p>
-<p>salary: {_salary}</p>
-<p>'''.format(_name = name,</p>
-<p>_age = age,</p>
-<p>_job = job,</p>
-<p>_salary = salary)</p>
-<ol start="3">
-<li>使用下标格式化输出info = '''</li>
-</ol>
-<p>---------- info of {0} ---------</p>
-<p>Name: {0}</p>
-<p>Age: {1}</p>
-<p>job: {2}</p>
-<p>salary: {3}</p>
-<p>'''.format(name, age, job, salary)</p>
-<p>使用 getpass 模块隐藏用户输入的密码import getpass</p>
-<p>username = input(&quot;username: &quot;)</p>
-<p>password = getpass.getpass(&quot;password: &quot;)</p>
-<p>print(username)</p>
-<p>print(password)</p>
-<p>需要注意的是，上面那段代码无法在 PyCharm 等 IDE 中运行，必须再终端中运行</p>
-<p>使用 type() 函数获取变量类型type(variable)</p>
-<p>while … else 语句count = 0</p>
-<p>while count &lt; 3:</p>
-<p>guess_age = int(input(&quot;guess age: &quot;))</p>
-<p>if guess_age == age_of_oldboy:</p>
-<p>print(&quot;yes, you got it&quot;)</p>
-<p>break</p>
-<p>elif guess_age &gt; age_of_oldboy:</p>
-<p>print(&quot;Ooops, think smaller...&quot;)</p>
-<p>else:</p>
-<p>print(&quot;Ooops, think bigger! &quot;)</p>
-<p>count += 1</p>
-<p>else :</p>
-<p>print(&quot;Ooops, you dont got it&quot;)</p>
-<p>else 语句块必须再 while 正常退出时才执行，在 while 语句被 break 的情况下，else 语句块不会被执行</p>
-<p>for … else … 语句for i in range(10):</p>
-<p>print(&quot;i value = &quot;, i)</p>
-<h1 id="break-后不会运行-else-块">break 后不会运行 else 块</h1>
-<p>else:</p>
-<p>print(&quot;success ended&quot;)</p>
-<p>与 while … else … 类似，当 for 语句正常结束时才会运行，break 后不会运行</p>
-<p>以上</p>
-
+                  
                 </div>
               </div>
               
